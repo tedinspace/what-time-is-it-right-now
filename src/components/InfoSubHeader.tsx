@@ -1,11 +1,11 @@
 import { Box, Text } from "grommet";
-import { Add, Clock, Subtract } from "grommet-icons";
+import { Add, CircleInformation, Subtract } from "grommet-icons";
 
 interface IProps {
   isOpen: boolean;
   setIsOpen(isOpen: boolean): void;
 }
-export function NowSubHeader(props: IProps) {
+export function InfoSubHeader(props: IProps) {
   return (
     <Box
       fill="horizontal"
@@ -16,14 +16,14 @@ export function NowSubHeader(props: IProps) {
         props.setIsOpen(!props.isOpen);
       }}
       style={{
-        borderBottom: "2px solid black",
+        borderBottom:"2px solid black"
       }}
     >
       <Box direction="row" justify="start" fill="horizontal">
-        <Clock size="large" color="#C5CBD3" />
+        <CircleInformation size="large" color="#C5CBD3" />
         &nbsp;&nbsp;
         <Text size="xxlarge" color={"#C5CBD3"} alignSelf="center">
-          <i>Now</i>
+          <i>Info</i>
         </Text>
       </Box>
       <Box fill="vertical" alignSelf="center">

@@ -1,21 +1,26 @@
 import { Box, Collapsible } from "grommet";
 import { useState } from "react";
-import AllTimes from "./components/AllTImes";
+import AllTimes from "./components/AllTimes";
 import { AppHeader } from "./components/AppHeader";
 import { NowSubHeader } from "./components/NowSubHeader";
 
 function App() {
-  const [isOpen, setIsOpen] = useState<any>(true);
+  const [nowIsOpen, setNowIsOpen] = useState<boolean>(true);
+  const [infoIsOpen, setInfoIsOpen] = useState<boolean>(true);
   return (
     <Box direction="column">
       <AppHeader />
-      <NowSubHeader
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-      />
-      <Collapsible open={isOpen}>
+      <NowSubHeader isOpen={nowIsOpen} setIsOpen={setNowIsOpen} />
+      <Collapsible open={nowIsOpen}>
         <AllTimes />
       </Collapsible>
+      {/*
+             <InfoSubHeader isOpen={infoIsOpen} setIsOpen={setInfoIsOpen} />
+      <Collapsible open={infoIsOpen}>
+        <Information />
+      </Collapsible>
+        
+        */}
     </Box>
   );
 }
