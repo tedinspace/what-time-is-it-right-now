@@ -2,6 +2,8 @@ import { Box, Collapsible } from "grommet";
 import { useState } from "react";
 import AllTimes from "./components/AllTimes";
 import { AppHeader } from "./components/AppHeader";
+import { Information } from "./components/Information";
+import { InfoSubHeader } from "./components/InfoSubHeader";
 import { NowSubHeader } from "./components/NowSubHeader";
 
 function App() {
@@ -14,13 +16,10 @@ function App() {
       <Collapsible open={nowIsOpen}>
         <AllTimes />
       </Collapsible>
-      {/*
-             <InfoSubHeader isOpen={infoIsOpen} setIsOpen={setInfoIsOpen} />
+      <InfoSubHeader isOpen={infoIsOpen} setIsOpen={setInfoIsOpen} />
       <Collapsible open={infoIsOpen}>
         <Information />
       </Collapsible>
-        
-        */}
     </Box>
   );
 }
