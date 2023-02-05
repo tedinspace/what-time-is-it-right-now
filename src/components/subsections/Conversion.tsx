@@ -1,4 +1,5 @@
-import { Box, Button, Form, FormField, Select, TextInput } from "grommet";
+import { Box, Button, Form, FormField, Select, TextInput, Text } from "grommet";
+import { Add, Update } from "grommet-icons";
 import React from "react";
 import { options, TimeType } from "../../functions";
 import { convert } from "../../functions/convert";
@@ -23,7 +24,7 @@ class Conversion extends React.Component<IProps, IState> {
 
   /**
    * fetch the current converted value based on state
-   * @returns 
+   * @returns
    */
   toValue = (): string | number => {
     return convert(
@@ -65,17 +66,27 @@ class Conversion extends React.Component<IProps, IState> {
               }}
             />
           </FormField>
-          <Button
-            onClick={() => {
-              this.setState({
-                fromValue: this.toValue(),
-                fromType: this.state.toType,
-                toType: this.state.fromType,
-              });
-            }}
-          >
-            Swap
-          </Button>
+          <FormField>
+            <div>
+              &nbsp;&nbsp;&nbsp;
+              <Button
+                hoverIndicator="light-1"
+                onClick={() => {
+                  this.setState({
+                    fromValue: this.toValue(),
+                    fromType: this.state.toType,
+                    toType: this.state.fromType,
+                  });
+                }}
+                active
+              >
+                <Box pad="small" direction="row" align="center" gap="small">
+                  <Update color="black" />
+                  <Text>Swap</Text>
+                </Box>
+              </Button>
+            </div>
+          </FormField>
           <FormField>
             <Select
               style={{ color: "#8F99A8" }}
