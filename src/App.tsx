@@ -6,6 +6,7 @@ import { ConvertSubHeader } from "./components/subheaders/ConvertSubHeader";
 import { Information } from "./components/subsections/Information";
 import { InfoSubHeader } from "./components/subheaders/InfoSubHeader";
 import { NowSubHeader } from "./components/subheaders/NowSubHeader";
+import { Conversion } from "./components/subsections/Conversion";
 
 function App() {
   const [nowIsOpen, setNowIsOpen] = useState<boolean>(true);
@@ -20,7 +21,7 @@ function App() {
       </Collapsible>
       <ConvertSubHeader isOpen={convertIsOpen} setIsOpen={setConvertIsOpen} />
       <Collapsible open={convertIsOpen}>
-        <div>hi</div>
+        <Conversion />
       </Collapsible>
       <InfoSubHeader isOpen={infoIsOpen} setIsOpen={setInfoIsOpen} />
       <Collapsible open={infoIsOpen}>
