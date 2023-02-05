@@ -12,7 +12,7 @@ export const getMJD = (d: Date): number => {
  * @returns
  */
 export const getJD = (d: Date): number => {
-  return new Date().getTime() / 86400000 + 2440587.5;
+  return new Date(d).getTime() / 86400000 + 2440587.5;
 };
 /**
  * convert Date to ISO string
@@ -31,6 +31,14 @@ export const toISO = (d: Date): string => {
 export const toMilli = (d: Date): number => {
   return +d;
 };
+/**
+ *
+ * @param d
+ * @returns
+ */
+export const toLocal = (d: Date): string => {
+  return d.toLocaleString();
+};
 
 /**
  * MJD --> JD
@@ -47,4 +55,13 @@ export const mjd2jd = (mjd: number): number => {
  */
 export const jd2mjd = (jd: number): number => {
   return jd - 2400000.5;
+};
+
+export const jd2date = (jd: number): Date => {
+  return new Date(jd2milli(jd));
+};
+
+export const jd2milli = (jd: number) => {
+  let milli = jd * 86400000 - 2440587.5;
+  return milli;
 };

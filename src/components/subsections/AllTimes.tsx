@@ -2,7 +2,7 @@ import { Notification } from "grommet";
 import { Clipboard } from "grommet-icons";
 import { useEffect, useState } from "react";
 import _ from "lodash";
-import { getJD, getMJD, toMilli } from "../../functions/time";
+import { getJD, getMJD, toISO, toLocal, toMilli } from "../../functions/time";
 import { TimeDisplay } from "../util/TimeDisplay";
 
 import { copy } from "../../functions/clipboard";
@@ -14,22 +14,29 @@ interface ITimesNow {
   milli: number;
 }
 
+/**
+ * compute all times
+ * @returns ITimesNow object
+ */
 const computeTimesNow = (): ITimesNow => {
   let now = new Date();
   return {
     mjd: getMJD(now),
     jd: getJD(now),
-    iso: now.toISOString(),
-    local: now.toLocaleTimeString() + " - " + now.toLocaleDateString(),
+    iso: toISO(now),
+    local: toLocal(now),
     milli: toMilli(now),
   };
 };
 
 function AllTimes() {
+  /* Hooks */
   const [timesNow, setTimesNow] = useState(computeTimesNow());
   const [visible, setVisible] = useState<boolean | undefined>(false);
+  /* Hooks - update */
   const onOpen = () => setVisible(true);
   const onClose = () => setVisible(undefined);
+  /* Timer */
   useEffect(() => {
     setTimeout(() => {
       setTimesNow(computeTimesNow());

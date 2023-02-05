@@ -15,13 +15,13 @@ function App() {
   return (
     <Box direction="column">
       <AppHeader />
-      <NowSubHeader isOpen={nowIsOpen} setIsOpen={setNowIsOpen} />
-      <Collapsible open={nowIsOpen}>
-        <AllTimes />
-      </Collapsible>
       <ConvertSubHeader isOpen={convertIsOpen} setIsOpen={setConvertIsOpen} />
       <Collapsible open={convertIsOpen}>
         <Conversion />
+      </Collapsible>
+      <NowSubHeader isOpen={nowIsOpen} setIsOpen={setNowIsOpen} />
+      <Collapsible open={nowIsOpen}>
+        <AllTimes />
       </Collapsible>
       <InfoSubHeader isOpen={infoIsOpen} setIsOpen={setInfoIsOpen} />
       <Collapsible open={infoIsOpen}>
