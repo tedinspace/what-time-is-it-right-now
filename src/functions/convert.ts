@@ -2,13 +2,18 @@ import { TimeType } from ".";
 import {
   getJD,
   getMJD,
-  jd2date,
-  mjd2jd,
   toISO,
   toLocal,
   toMilli,
 } from "./time";
 
+/**
+ * primary convert functoin
+ * @param from - value to convert
+ * @param fromType - value type
+ * @param toType - type to convert to
+ * @returns
+ */
 export const convert = (
   from: string | number,
   fromType: TimeType,
@@ -31,12 +36,12 @@ export const convert = (
 };
 
 /**
- *
- * @param iso
- * @param to
- * @returns
+ * convert iso string to ____
+ * @param iso - iso string
+ * @param to - type to convert to
+ * @returns iso as ____
  */
-export const isoTo = (iso: string, to: TimeType): string | number => {
+const isoTo = (iso: string, to: TimeType): string | number => {
   let asDate = new Date(iso);
   switch (to) {
     case TimeType.ISO:
@@ -55,12 +60,12 @@ export const isoTo = (iso: string, to: TimeType): string | number => {
 };
 
 /**
- *
- * @param local
- * @param to
- * @returns
+ * convert local string to ____
+ * @param local - local string
+ * @param to - type to convert to
+ * @returns local string as ____
  */
-export const localTo = (local: string, to: TimeType): string | number => {
+const localTo = (local: string, to: TimeType): string | number => {
   let asDate = new Date(local);
   switch (to) {
     case TimeType.ISO:
@@ -78,7 +83,13 @@ export const localTo = (local: string, to: TimeType): string | number => {
   }
 };
 
-export const millTo = (milli: number, to: TimeType): string | number => {
+/**
+ * convert milli to ____
+ * @param milli - milli value
+ * @param to - type to convert to
+ * @returns milli as ____
+ */
+const millTo = (milli: number, to: TimeType): string | number => {
   let asDate = new Date(milli);
   switch (to) {
     case TimeType.ISO:
@@ -96,7 +107,13 @@ export const millTo = (milli: number, to: TimeType): string | number => {
   }
 };
 
-export const mjdTo = (mjd: number, to: TimeType): string | number => {
+/**
+ * convert MJD to _____
+ * @param mjd - mjd value
+ * @param to type to convert to
+ * @returns MJD as _____
+ */
+const mjdTo = (mjd: number, to: TimeType): string | number => {
   let asDate: Date = jd2date(mjd2jd(mjd));
   switch (to) {
     case TimeType.ISO:
@@ -113,8 +130,13 @@ export const mjdTo = (mjd: number, to: TimeType): string | number => {
       return "";
   }
 };
-
-export const jdTo = (jd: number, to: TimeType): string | number => {
+/**
+ * convert JD to _____
+ * @param jd - jd value
+ * @param to - type to convert to
+ * @returns JD as _____
+ */
+const jdTo = (jd: number, to: TimeType): string | number => {
   let asDate: Date = jd2date(jd);
   switch (to) {
     case TimeType.ISO:
@@ -130,4 +152,39 @@ export const jdTo = (jd: number, to: TimeType): string | number => {
     default:
       return "";
   }
+};
+
+
+/**
+ * MJD --> JD
+ * @param mjd
+ * @returns
+ */
+export const mjd2jd = (mjd: number): number => {
+  return mjd + 2400000.5;
+};
+/**
+ * JD --> MJD
+ * @param jd
+ * @returns
+ */
+export const jd2mjd = (jd: number): number => {
+  return jd - 2400000.5;
+};
+/**
+ * JD --> Date
+ * @param jd 
+ * @returns 
+ */
+export const jd2date = (jd: number): Date => {
+  return new Date(jd2milli(jd));
+};
+/**
+ * JD --> Milli
+ * @param jd 
+ * @returns 
+ */
+export const jd2milli = (jd: number) => {
+  let milli = (jd - 2440587.5) * 86400000 
+  return milli;
 };

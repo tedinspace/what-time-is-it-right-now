@@ -21,6 +21,10 @@ class Conversion extends React.Component<IProps, IState> {
     };
   }
 
+  /**
+   * fetch the current converted value based on state
+   * @returns 
+   */
   toValue = (): string | number => {
     return convert(
       this.state.fromValue,
