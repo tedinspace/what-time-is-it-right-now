@@ -2,10 +2,10 @@ import { Notification } from "grommet";
 import { Clipboard } from "grommet-icons";
 import { useEffect, useState } from "react";
 import _ from "lodash";
-import { getJD, getMJD, toMilli } from "../functions/time";
-import { TimeDisplay } from "./TimeDisplay";
+import { getJD, getMJD, toMilli } from "../../functions/time";
+import { TimeDisplay } from "../util/TimeDisplay";
 
-import { copy } from "../functions/clipboard";
+import { copy } from "../../functions/clipboard";
 interface ITimesNow {
   mjd: number;
   jd: number;
