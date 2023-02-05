@@ -1,9 +1,8 @@
 import { Notification } from "grommet";
 import { Clipboard } from "grommet-icons";
-import React, { useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
 import _ from "lodash";
-import { getJD, getMJD } from "../functions/time";
+import { getJD, getMJD, toMilli } from "../functions/time";
 import { TimeDisplay } from "./TimeDisplay";
 
 import { copy } from "../functions/clipboard";
@@ -12,6 +11,7 @@ interface ITimesNow {
   jd: number;
   iso: String;
   local: String;
+  milli: number;
 }
 
 const computeTimesNow = (): ITimesNow => {
@@ -21,12 +21,13 @@ const computeTimesNow = (): ITimesNow => {
     jd: getJD(now),
     iso: now.toISOString(),
     local: now.toLocaleTimeString() + " - " + now.toLocaleDateString(),
+    milli: toMilli(now),
   };
 };
 
 function AllTimes() {
   const [timesNow, setTimesNow] = useState(computeTimesNow());
-  const [visible, setVisible] = useState<boolean|undefined>(false);
+  const [visible, setVisible] = useState<boolean | undefined>(false);
   const onOpen = () => setVisible(true);
   const onClose = () => setVisible(undefined);
   useEffect(() => {
@@ -66,6 +67,14 @@ function AllTimes() {
         now={_.round(timesNow.jd, 5)}
         onClick={() => {
           copy(timesNow.jd);
+          onOpen();
+        }}
+      />
+      <TimeDisplay
+        title="Milliseconds Since Unix Epoch"
+        now={_.round(timesNow.milli, 5)}
+        onClick={() => {
+          copy(timesNow.milli);
           onOpen();
         }}
       />
