@@ -1,4 +1,5 @@
 import { Box, Clock, Text } from "grommet";
+import { TED } from "./util/TedHeader";
 
 export function AppHeader() {
   return (
@@ -13,7 +14,13 @@ export function AppHeader() {
       &nbsp;&nbsp;&nbsp;&nbsp;
       <Box fill alignSelf="center">
         <Text color={"#FFFFFF"} size="xxlarge">
-          <b>What Time is It Right Now</b>
+          <b>
+            What Time is It{" "}
+            <u style={{ color: TED }}>
+              <i>Right Now</i>
+            </u>
+            ?
+          </b>
         </Text>
       </Box>
     </Box>

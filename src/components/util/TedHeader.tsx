@@ -3,7 +3,7 @@ import { Deploy, Github, Home } from "grommet-icons";
 
  const DARK3 = "#2F343C"
  const LIGHT0 = "#f0e5e1"
- const TED = "#a4c8de"
+export const TED = "#a4c8de"
 export function TedHeader() {
   return (
     <Header
