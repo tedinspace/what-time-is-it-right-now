@@ -2,7 +2,7 @@ import { Header, Box, Text } from "grommet";
 import { Deploy } from "grommet-icons";
 
 export const DARK1 = "#1C2127";
-export const DARK5 = "#404854"
+export const DARK3 = "#2F343C"
 
 export const LIGHT0 = "#f0e5e1"
 export const POP1 = "#c96d4f"
@@ -11,7 +11,7 @@ export function TedHeader() {
   return (
     <Header
       pad="small"
-      background={DARK5}
+      background={DARK3}
       style={{
         borderBottom: "2px solid " + DARK1,
       }}
