@@ -1,5 +1,5 @@
 import { Box, Button, Form, FormField, Select, TextInput, Text } from "grommet";
-import { Add, Update } from "grommet-icons";
+import {  Update } from "grommet-icons";
 import React from "react";
 import { options, TimeType } from "../../functions";
 import { convert } from "../../functions/convert";

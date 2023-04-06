@@ -19,20 +19,25 @@ export const convert = (
   fromType: TimeType,
   toType: TimeType
 ) => {
-  switch (fromType) {
-    case TimeType.ISO:
-      return isoTo(from + "", toType);
-    case TimeType.JD:
-      return jdTo(+from, toType);
-    case TimeType.LOCAL:
-      return localTo(from + "", toType);
-    case TimeType.MILLI:
-      return millTo(+from, toType);
-    case TimeType.MJD:
-      return mjdTo(+from, toType);
-    default:
-      return "";
+  try{
+    switch (fromType) {
+      case TimeType.ISO:
+        return isoTo(from + "", toType);
+      case TimeType.JD:
+        return jdTo(+from, toType);
+      case TimeType.LOCAL:
+        return localTo(from + "", toType);
+      case TimeType.MILLI:
+        return millTo(+from, toType);
+      case TimeType.MJD:
+        return mjdTo(+from, toType);
+      default:
+        return "";
+    }
+  }catch{
+    return "invalid"
   }
+  
 };
 
 /**
