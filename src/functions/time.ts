@@ -42,3 +42,17 @@ export const toLocal = (d: Date): string => {
   return d.toLocaleString();
 };
 
+/**
+ * 
+ * @param d 
+ * @returns 
+ */
+export const toDOY = (d: Date): number => {
+  let start = new Date(d.getFullYear(), 0, 0);
+  let diff =
+    +d -
+    +start +
+    (start.getTimezoneOffset() - d.getTimezoneOffset()) * 60 * 1000;
+  let oneDay = 1000 * 60 * 60 * 24;
+  return Math.floor(diff / oneDay);
+};

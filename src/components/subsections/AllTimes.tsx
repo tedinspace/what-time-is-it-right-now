@@ -2,7 +2,7 @@ import { Notification } from "grommet";
 import { Clipboard } from "grommet-icons";
 import { useEffect, useState } from "react";
 import _ from "lodash";
-import { getJD, getMJD, toISO, toLocal, toMilli } from "../../functions/time";
+import { getJD, getMJD, toDOY, toISO, toLocal, toMilli } from "../../functions/time";
 import { TimeDisplay } from "../util/TimeDisplay";
 
 import { copy } from "../../functions/clipboard";
@@ -12,6 +12,7 @@ interface ITimesNow {
   iso: String;
   local: String;
   milli: number;
+  doy:number
 }
 
 /**
@@ -26,6 +27,7 @@ const computeTimesNow = (): ITimesNow => {
     iso: toISO(now),
     local: toLocal(now),
     milli: toMilli(now),
+    doy: toDOY(now)
   };
 };
 
@@ -50,6 +52,14 @@ function AllTimes() {
         now={timesNow.local}
         onClick={() => {
           copy(timesNow.local);
+          onOpen();
+        }}
+      />
+      <TimeDisplay
+        title="UTC DOY"
+        now={timesNow.doy}
+        onClick={() => {
+          copy(timesNow.doy);
           onOpen();
         }}
       />
