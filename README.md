@@ -1,3 +1,5 @@
+![ico](public/favicon.ico)
+
 # time app
 
 This is my time conversion application 
