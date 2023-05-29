@@ -1,11 +1,11 @@
 import { Box, Clock, Text } from "grommet";
 import { POP1, TED } from "../functions/colors";
-
+import "../index.css"
 export function AppHeader() {
   return (
     <Box
       direction="row"
-      background={"#10151a"}
+      id="grid-pattern"
       style={{ border: "3px solid #111418" }}
     >
       <Box round="full">

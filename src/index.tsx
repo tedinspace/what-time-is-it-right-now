@@ -13,9 +13,10 @@ root.render(
   <React.StrictMode>
     <Grommet
       theme={{
+  
         global: {
           active:{
-            background:{color:"#C5CBD3",opacity:1}
+            background:{color:"#C5CBD3",opacity:1},
           },
           selected:{
            background:{color:POP0}

@@ -4,6 +4,7 @@ import React from "react";
 import { options, TimeType } from "../../functions";
 import { convert } from "../../functions/convert";
 import { isoNow } from "../../functions/now";
+import { POP1 } from "../../functions/colors";
 
 export interface IState {
   fromType: TimeType;
@@ -70,7 +71,7 @@ class Conversion extends React.Component<IProps, IState> {
             <div>
               &nbsp;&nbsp;&nbsp;
               <Button
-                hoverIndicator="light-1"
+               hoverIndicator={POP1}
                 onClick={() => {
                   this.setState({
                     fromValue: this.toValue(),
