@@ -1,4 +1,3 @@
-![ico](public/favicon.ico)
 
 # time app
 
