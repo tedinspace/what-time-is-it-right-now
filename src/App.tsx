@@ -7,7 +7,7 @@ import { Information } from "./components/subsections/Information";
 import { InfoSubHeader } from "./components/subheaders/InfoSubHeader";
 import { NowSubHeader } from "./components/subheaders/NowSubHeader";
 import { Conversion } from "./components/subsections/Conversion";
-import { TedHeader } from "./components/util/TedHeader";
+import { TedHead } from "./components/util/TedHead";
 
 function App() {
   const [nowIsOpen, setNowIsOpen] = useState<boolean>(true);
@@ -15,7 +15,7 @@ function App() {
   const [infoIsOpen, setInfoIsOpen] = useState<boolean>(true);
   return (
     <Box direction="column">
-      <TedHeader/>
+      <TedHead/>
       <AppHeader />
       <NowSubHeader isOpen={nowIsOpen} setIsOpen={setNowIsOpen} />
       <Collapsible open={nowIsOpen}>

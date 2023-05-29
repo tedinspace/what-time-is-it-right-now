@@ -1,11 +1,11 @@
 import { Box, Clock, Text } from "grommet";
-import { TED } from "./util/TedHeader";
+import { POP1, TED } from "../functions/colors";
 
 export function AppHeader() {
   return (
     <Box
       direction="row"
-      background={"#07090a"}
+      background={"#10151a"}
       style={{ border: "3px solid #111418" }}
     >
       <Box round="full">
@@ -15,10 +15,10 @@ export function AppHeader() {
       <Box fill alignSelf="center">
         <Text color={"#FFFFFF"} size="xxlarge">
           <b>
-            What Time is It{" "}
-            <u style={{ color: TED }}>
+            What <i style={{color:POP1}}>Time</i> is It{" "}
+            <span style={{ color: TED }}>
               <i>Right Now</i>
-            </u>
+            </span>
             ?
           </b>
         </Text>

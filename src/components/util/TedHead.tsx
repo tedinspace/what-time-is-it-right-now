@@ -1,35 +1,35 @@
 import { Header, Box, Text } from "grommet";
 import { Deploy, Github, Home } from "grommet-icons";
+import { POP2, TED, UPPERBAR0, UPPERBAR1 } from "../../functions/colors";
 
- const DARK3 = "#2F343C"
- const LIGHT0 = "#f0e5e1"
-export const TED = "#a4c8de"
-export function TedHeader() {
+export function TedHead() {
   return (
     <Header
       pad="small"
-      background={DARK3}
+      background={UPPERBAR0}
       style={{
-        borderBottom: "2px solid #404854" 
+        borderBottom: "2px solid " + UPPERBAR1,
       }}
     >
       <Box direction="row">
-      <a href="http://tedsite.com">
-          <Deploy size="medium" color={LIGHT0} />
+        <a href="http://tedsite.com">
+          <Deploy size="medium" color={TED} />
         </a>
         &nbsp;&nbsp;
         <Text size="large">
-          <b><span style={{color:TED}}>Ted</span>Site</b>
+          <b>
+            <span style={{ color: POP2 }}>Ted</span>Site
+          </b>
           <i>.com</i>
         </Text>
       </Box>
       <Box direction="row">
-        <a href="https://tedsite.com/">
-          <Home color={TED} />
+        <a href="http://tedsite.com">
+          <Home />
         </a>
         &nbsp;&nbsp;
         <a href="https://github.com/tedinspace">
-          <Github color={TED}  />
+          <Github />
         </a>
       </Box>
     </Header>

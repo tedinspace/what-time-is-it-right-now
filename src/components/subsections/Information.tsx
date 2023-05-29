@@ -1,9 +1,10 @@
 import { Box, Paragraph, Text } from "grommet";
+import { POP2 } from "../../functions/colors";
 
 export function Information() {
   return (
     <Box margin={"medium"}>
-      <Text size="xlarge">
+      <Text size="xlarge" color={POP2}>
         <b>Why Did I Make This?</b>
       </Text>
       <Paragraph size="large">
