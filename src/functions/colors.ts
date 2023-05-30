@@ -11,6 +11,6 @@ export const POP1 = "#c96d4f";
 export const POP2 = "#d4a798";
 export const HEADER0 = "#ABB3BF";
 export const TED = "#a4c8de";
-export const UPPERBAR0 = "#2a3642";
-export const UPPERBAR1 = "#36424f"
+export const UPPERBAR0 = "#272e38";
+export const UPPERBAR1 = "#161b22"
 
