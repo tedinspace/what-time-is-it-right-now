@@ -8,14 +8,14 @@ interface IProps {
 export function TimeDisplay(props: IProps) {
   return (
     <Box margin={"medium"}>
-      <Text size="xlarge">
+      <Text size="medium">
         <b>{props.title}</b>
       </Text>
       <Box margin={"small"}>
         <div>
           <CopyButton onClick={props.onClick} />
           &nbsp;&nbsp;&nbsp;
-          <Text size="xlarge" style={{ fontFamily: "Courier New" }}>
+          <Text size="large" style={{ fontFamily: "Courier New" }}>
             {props.now}
           </Text>
         </div>
