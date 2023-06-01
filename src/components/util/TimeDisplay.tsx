@@ -8,7 +8,7 @@ interface IProps {
 export function TimeDisplay(props: IProps) {
   return (
     <Box margin={"medium"}>
-      <Text size="medium">
+      <Text size="medium" color={"#8F99A8"}>
         <b>{props.title}</b>
       </Text>
       <Box margin={"small"}>
