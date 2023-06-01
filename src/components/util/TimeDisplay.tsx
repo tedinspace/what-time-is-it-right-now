@@ -15,7 +15,7 @@ export function TimeDisplay(props: IProps) {
         <div>
           <CopyButton onClick={props.onClick} />
           &nbsp;&nbsp;&nbsp;
-          <Text size="large" style={{ fontFamily: "Courier New" }}>
+          <Text size="xlarge" style={{ fontFamily: "Courier New" }}>
             {props.now}
           </Text>
         </div>

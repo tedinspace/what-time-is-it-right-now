@@ -8,7 +8,7 @@ export function CopyButton(props: IProps) {
   return (
     <Button  hoverIndicator={POP2} onClick={props.onClick} active>
       <Box pad="xxsmall" direction="row" align="center" gap="small">
-        <Copy color="black" size="small" />
+        <Copy color="black" size="15px" />
       </Box>
     </Button>
   );
