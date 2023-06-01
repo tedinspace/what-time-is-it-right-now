@@ -20,6 +20,7 @@ export function TimeDisplay(props: IProps) {
           </Text>
         </div>
       </Box>
+      <Box fill="horizontal" style={{borderTop:"1px solid #0b0d0f"}}></Box>
     </Box>
   );
 }
