@@ -10,19 +10,21 @@ export function InfoSubHeader(props: IProps) {
     <Box
       fill="horizontal"
       direction="row"
-      background={"#1C2127"}
+      background={"level1"}
       pad="xsmall"
       onClick={() => {
         props.setIsOpen(!props.isOpen);
       }}
-      style={{
-        borderBottom:"2px solid black"
+      border={{
+        side: "bottom",
+        color: "bar_accent",
+        size: "3px",
       }}
     >
       <Box direction="row" justify="start" fill="horizontal">
-        <CircleInformation size="large" color="#C5CBD3" />
+        <CircleInformation size="large" color="header" />
         &nbsp;&nbsp;
-        <Text size="xxlarge" color={"#C5CBD3"} alignSelf="center">
+        <Text size="xxlarge" color={"header"} alignSelf="center">
           <i>Info</i>
         </Text>
       </Box>

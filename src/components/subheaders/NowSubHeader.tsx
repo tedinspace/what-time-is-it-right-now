@@ -10,19 +10,21 @@ export function NowSubHeader(props: IProps) {
     <Box
       fill="horizontal"
       direction="row"
-      background={"#1C2127"}
       pad="xsmall"
       onClick={() => {
         props.setIsOpen(!props.isOpen);
       }}
-      style={{
-        borderBottom: "2px solid black",
+      background={"level1"}
+      border={{
+        side: "bottom",
+        color: "bar_accent",
+        size: "3px",
       }}
     >
       <Box direction="row" justify="start" fill="horizontal">
-        <Clock size="large" color="#C5CBD3" />
+        <Clock size="large" color="header" />
         &nbsp;&nbsp;
-        <Text size="xxlarge" color={"#C5CBD3"} alignSelf="center">
+        <Text size="xxlarge" color={"header"} alignSelf="center">
           <i>Now</i>
         </Text>
       </Box>

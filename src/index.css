@@ -5,8 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #111418;
-  color: #EDEFF2;
+
 }
 
 code {
@@ -21,6 +20,17 @@ code {
   linear-gradient(90deg, #192129 2px, transparent 2px),
    linear-gradient(#192129 1px, transparent 1px), 
   linear-gradient(90deg, #192129 1px, #10151a 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+#grid-pattern-light {
+  background-color: #E5E8EB;
+  opacity: 0.8;
+  background-image:  linear-gradient(#F6F7F9 2px, transparent 2px), 
+  linear-gradient(90deg, #F6F7F9 2px, transparent 2px),
+   linear-gradient(#F6F7F9 1px, transparent 1px), 
+  linear-gradient(90deg, #F6F7F9 1px, #E5E8EB 1px);
   background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }

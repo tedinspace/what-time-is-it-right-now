@@ -4,7 +4,7 @@ import React from "react";
 import { options, TimeType } from "../../functions";
 import { convert } from "../../functions/convert";
 import { isoNow } from "../../functions/now";
-import { POP1 } from "../../functions/colors";
+import { theme } from "../../shared/themes";
 
 export interface IState {
   fromType: TimeType;
@@ -71,7 +71,7 @@ class Conversion extends React.Component<IProps, IState> {
             <div>
               &nbsp;&nbsp;&nbsp;
               <Button
-               hoverIndicator={POP1}
+               hoverIndicator={theme.global.colors.orange_medium}
                 onClick={() => {
                   this.setState({
                     fromValue: this.toValue(),
@@ -82,7 +82,7 @@ class Conversion extends React.Component<IProps, IState> {
                 active
               >
                 <Box pad="small" direction="row" align="center" gap="small">
-                  <Update color="black" />
+                  <Update  />
                   <Text>Swap</Text>
                 </Box>
               </Button>
