@@ -25,12 +25,12 @@ code {
 }
 
 #grid-pattern-light {
-  background-color: #E5E8EB;
+  background-color: #EDEFF2;
   opacity: 0.8;
   background-image:  linear-gradient(#F6F7F9 2px, transparent 2px), 
   linear-gradient(90deg, #F6F7F9 2px, transparent 2px),
    linear-gradient(#F6F7F9 1px, transparent 1px), 
-  linear-gradient(90deg, #F6F7F9 1px, #E5E8EB 1px);
+  linear-gradient(90deg, #F6F7F9 1px, #EDEFF2 1px);
   background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }

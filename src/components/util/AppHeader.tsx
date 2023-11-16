@@ -7,8 +7,8 @@ export function AppHeader(props: { darkMode: boolean }) {
       id={props.darkMode ? "grid-pattern" : "grid-pattern-light"}
       border={{
         side: "all",
-        size: "3px",
-        color: "level1",
+        size: "2px",
+        color: props.darkMode?"#1C2127":"white"
       }}
     >
       <Box round="full">
