@@ -1,11 +1,17 @@
 const storageKey = "THEME";
 
-export const fetchThemeSetting = () => {
+/**
+ * default setting
+ * @param setTo 
+ * @returns 
+ */
+export const fetchThemeSetting = (setTo:boolean) => {
   const setting = localStorage.getItem(storageKey);
   if (setting !== undefined && setting !== null) {
     return setting === "dark";
   }
-  return true;
+  updateThemeSetting(setTo)
+  return setTo;
 };
 
 export const updateThemeSetting = (darkMode: boolean) => {

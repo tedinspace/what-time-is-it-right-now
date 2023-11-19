@@ -1,3 +1,6 @@
+/**
+ * custom grommet light/dark theme object
+ */
 export const theme = {
   global: {
     colors: {
@@ -18,7 +21,6 @@ export const theme = {
         dark: "#272e38", // UPPERBAR0
         light: "#E5E8EB",
       },
-
       bar_accent: {
         dark: "#161b22", // UPPERBAR1
         light: "#C5CBD3",
@@ -48,9 +50,21 @@ export const theme = {
         dark: "#ABB3BF",
         light: "black",
       },
-      swap_soft:{
-        dark:"#fff",
-        light:"#8F99A8"
+      swap_soft: {
+        dark: "#fff",
+        light: "#8F99A8",
+      },
+      swap_hard: {
+        dark: "#fff",
+        light: "#000",
+      },
+      no_swap: {
+        dark: "#000",
+        light: "#fff",
+      },
+      time_bar: {
+        dark: "#383E47",
+        light: "#D3D8DE",
       },
       warning: "#EB6847",
       success0: "#238C2C",
@@ -65,6 +79,19 @@ export const theme = {
       focus: "light_blue",
       control: "light_blue",
       active: "orange_medium",
+      'background-contrast': 'swap_hard'
+    },
+  },
+  tab: {
+    border: {
+      color: "swap_soft",
+      active: {
+        color: "orange",
+      },
+    },
+    color: "swap_soft",
+    active: {
+      color: "orange",
     },
   },
   card: {

@@ -9,7 +9,7 @@ import RootLayout from "./components/RootLayout";
 const theme_merged = deepMerge(grommet, theme);
 
 function App() {
-  const [darkMode, toggleDarkLight] = useState(fetchThemeSetting());
+  const [darkMode, toggleDarkLight] = useState(fetchThemeSetting(true));
 
   return (
     <Grommet full theme={theme_merged} themeMode={darkMode ? "dark" : "light"}>
