@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/what-time-is-it-right-now/static/css/main.ef507625.css",
-    "main.js": "/what-time-is-it-right-now/static/js/main.dfc26dc7.js",
+    "main.js": "/what-time-is-it-right-now/static/js/main.095dca6a.js",
     "static/js/787.267658f4.chunk.js": "/what-time-is-it-right-now/static/js/787.267658f4.chunk.js",
     "index.html": "/what-time-is-it-right-now/index.html",
     "main.ef507625.css.map": "/what-time-is-it-right-now/static/css/main.ef507625.css.map",
-    "main.dfc26dc7.js.map": "/what-time-is-it-right-now/static/js/main.dfc26dc7.js.map",
+    "main.095dca6a.js.map": "/what-time-is-it-right-now/static/js/main.095dca6a.js.map",
     "787.267658f4.chunk.js.map": "/what-time-is-it-right-now/static/js/787.267658f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef507625.css",
-    "static/js/main.dfc26dc7.js"
+    "static/js/main.095dca6a.js"
   ]
 }
